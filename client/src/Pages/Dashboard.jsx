@@ -12,7 +12,9 @@ export const Dashboard=()=>{
             }} p="0px"  borderBottom={"10px"} borderBottomColor="red" minW="100%" height={"640px"}  bgImage={dashboard} bgSize="cover">
             <HeaderDashboard/>
             </Container>
-            <Stack>
+            <Stack direction={{base:"column",md:"row"}}>
+                <MovieCard/>
+                <MovieCard/>
                 <MovieCard/>
                 <MovieCard/>
             </Stack>
