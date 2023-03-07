@@ -7,17 +7,19 @@ import {
   HStack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { HeaderDashboard } from "../Component/Header.dashboard";
 import dashboard from "../assests/dashboard2.jpg";
 import { MovieCard } from "../Component/MovieCard";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import ReactVideoPlayer from "../Component/ReactVideoPlayer";
 export const Dashboard = () => {
+  const[status,setstatus]=useState(false)
   return (
     <Container minW="100%" minH="880px" p="0px" bgColor="rgb(20,20,20)">
       <Container
-        justifyItems={"left"}
+        justifyItems={"center"}
         className="border"
         style={{
           boxShadow: "inset 0px 0px 300px rgb(20,20,20)",
@@ -28,11 +30,16 @@ export const Dashboard = () => {
         borderBottomColor="red"
         minW="100%"
         height={"640px"}
-        bgImage={dashboard}
+        bgImage={status?"":dashboard}
         bgSize="cover"
       >
         <HeaderDashboard />
-        <Stack
+        
+    (
+
+      {
+        status?<ReactVideoPlayer setstatus={setstatus}/>:(
+          <Stack
           m="auto"
        position={"absolute"}
           maxW="490px"
@@ -44,7 +51,7 @@ export const Dashboard = () => {
         >
           <Heading fontSize={"59px"}>Lucifer</Heading>
           <HStack>
-            <Button minW="180px" bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
+            <Button onClick={()=>{setstatus(true)}} minW="180px" bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
               Play
             </Button>
             <Button
@@ -62,6 +69,9 @@ export const Dashboard = () => {
             detectiv...
           </Text>
         </Stack>
+        )
+      }
+  
       </Container>
       <Container minW="89%" p="20px">
         <Heading pb="20px" pt="20px" color="white" fontSize={"30px"}>
@@ -106,6 +116,7 @@ export const Dashboard = () => {
           <MovieCard />
           <MovieCard />
         </SimpleGrid>
+    )
       </Container>
     </Container>
   );
