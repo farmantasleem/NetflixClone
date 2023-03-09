@@ -11,7 +11,8 @@ app.use("/movie",movieRoute)
 app.get("/hell",(req,res)=>{
     res.send({msg:"hi Form hell"})
 })
-app.listen(8081,()=>{
+const PORT=process.env.PORT||8081
+app.listen(PORT,()=>{
     console.log("Server started")
     try{
         connectDatabase()
