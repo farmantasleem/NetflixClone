@@ -1,13 +1,16 @@
 const express=require("express");
 const cors=require("cors");
 const connectDatabase = require("./config/db");
-const movieRouter = require("./routes/movie.route");
+const {movieRoute} = require("./routes/movie.route");
 const app=express()
 require("dotenv").config()
 
 app.use(cors())
-app.use("/movie",movieRouter)
+app.use("/movie",movieRoute)
 
+app.get("/hell",(req,res)=>{
+    res.send({msg:"hi Form hell"})
+})
 app.listen(8081,async()=>{
     console.log("Server started")
     try{

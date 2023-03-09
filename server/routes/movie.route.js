@@ -1,12 +1,12 @@
 const express=require("express");
 const mongoose=require("mongoose");
 const MovieModel = require("../model/MovieModel");
-const movieRouter=express.Router();
+const movieRoute=express.Router();
 
 
 //get all series/movie/netflix original data
 
-movieRouter.get("/:category",async(req,res)=>{
+movieRoute.get("/:category",async(req,res)=>{
     const category=req.params.category||"movie"
     try{
         const allMovieData=await MovieModel.find({category})
@@ -17,6 +17,17 @@ movieRouter.get("/:category",async(req,res)=>{
         res.status(404).send({msg:err.message})
     }
 })
+movieRoute.get("/",async(req,res)=>{
+   
+    try{
+        const allMovieData=await MovieModel.find()
+        res.status(200).send({data:allMovieData})
+
+    }
+    catch(err){
+        res.status(404).send({msg:err.message})
+    }
+})
 
 
-module.exports=movieRouter
+module.exports={movieRoute}
