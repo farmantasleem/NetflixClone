@@ -19,3 +19,4 @@ movieRouter.get("/:category",async(req,res)=>{
 })
 
 
+module.exports=movieRouter
