@@ -14,14 +14,20 @@ import {
   AccordionIcon,
   Box
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from "../Component/Header";
 import background from "../assests/background.jpg";
 import promotion1 from "../assests/promotion1.jpg";
 import promotion2 from "../assests/promotion2.jpg";
 import promotion3 from "../assests/promotion3.jpg";
 import promotion4 from "../assests/promotion4.jpg";
+import { useDispatch } from "react-redux";
+import { getData } from "../redux/actions";
 export const Home = () => {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+    dispatch(getData())
+  },[])
   return (
     <Container minW="100%" p="0%">
       <Container

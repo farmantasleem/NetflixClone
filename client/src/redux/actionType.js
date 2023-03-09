@@ -1,0 +1,2 @@
+export const GETDATAREQUEST="GETREQUEST";
+export const GETDATA="GETDATA"
