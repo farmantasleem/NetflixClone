@@ -6,7 +6,8 @@ const MovieSchema=mongoose.Schema({
     description:{type:String,required:true},
     releasedate:{type:String,required:true},
     lang:{type:String,default:"English"},
-    poster:{type:String,required:true}
+    poster:{type:String,required:true},
+    category:{type:String,default:"movie"}
 })
 
 const MovieModel=mongoose.model("movie",MovieSchema);
