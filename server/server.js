@@ -3,7 +3,7 @@ const cors=require("cors");
 const connectDatabase = require("./config/db");
 const movieRouter = require("./routes/movie.route");
 const app=express()
-require("dotenv")
+require("dotenv").config()
 
 app.use(cors())
 app.use("/movie",movieRouter)
