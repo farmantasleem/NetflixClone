@@ -30,7 +30,7 @@ import { ListCard } from "../Component/ListCard";
     })
     useEffect(()=>{
       if(state.mylist.length>0){
-        setfront(state.mylist[0])
+        setfront(state.mylist[0]||{})
       }
     },[state])
     return (
@@ -48,7 +48,7 @@ import { ListCard } from "../Component/ListCard";
           borderBottomColor="red"
           minW="100%"
           height={"640px"}
-          bgImage={status?"":front?.poster}
+          bgImage={status?"":front?.poster||""}
           bgSize="cover"
         >
           <HeaderDashboard />

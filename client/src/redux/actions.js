@@ -12,7 +12,7 @@ export const addtolist=(data,toast)=>{
     return async(disptach)=>{
         const data2=await fetch("https://netflix-h7qa.onrender.com/movie");
         toast({
-            description: "We've created your account for you.",
+            description: "Added to List",
         })
        disptach({type:ADDLIST,payload:data})
     }
@@ -22,7 +22,7 @@ export const removeList=(id,toast)=>{
     return async(disptach)=>{
         const data2=await fetch("https://netflix-h7qa.onrender.com/movie");
         toast({
-            description: "We've created your account for you.",
+            description: "Removed From List",
         })
        disptach({type:REMOVELIST,payload:id})
     }

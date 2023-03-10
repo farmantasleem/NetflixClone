@@ -43,9 +43,11 @@ export const Dashboard = () => {
         borderBottom={"10px"}
         borderBottomColor="red"
         minW="100%"
+        maxW={{base:"80%",md:"100%"}}
         height={"640px"}
         bgImage={status?"":front.poster}
-        bgSize="cover"
+        bgSize={{base:"cover",md:"cover"}}
+        bgPosition={{base:"right",md:"left"}}
       >
         <HeaderDashboard />
         
@@ -56,28 +58,28 @@ export const Dashboard = () => {
           <Stack
           m="auto"
        position={"absolute"}
-          maxW="490px"
+          maxW={{base:"80%",md:"490px"}}
           bottom={"100px"}
           direction="column"
           color="white"
           left="50px"
           textAlign={"left"}
         >
-          <Heading fontSize={"59px"}>{front.title}</Heading>
+          <Heading fontSize={{base:"39px",md:"59px"}}>{front.title}</Heading>
           <HStack>
-            <Button onClick={()=>{setstatus(true)}} minW="180px" bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
+            <Button onClick={()=>{setstatus(true)}} minW={{base:"120px",md:"180px"}} bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
               Play
             </Button>
             <Button
                 bgColor="rgb(96,94,90)"
                 color="white"
-                minW="180px"
+                minW={{base:"120px",md:"180px"}}
                
               >
                 <Info data={front}/>
               </Button>
           </HStack>
-          <Text fontSize={"19px"}>
+          <Text fontSize={{base:"15px",md:"19px"}}>
           {front.description||front.decription}
           </Text>
         </Stack>

@@ -6,7 +6,7 @@ import 'react-html5video/dist/styles.css'
 const ReactVideoPlayer=()=>{
 
     return(
-        <Container zIndex={1} ml="40px" justifySelf={"center"} position={"absolute"} top='80px'  p="0px" bgColor="black" justifyContent={"center"} minW="95%" onClick={()=>{}}>
+        <Container zIndex={1} ml="40px" justifySelf={"center"} position={"absolute"} top='80px'  p="0px" bgColor="black" justifyContent={"center"} minW={{base:"80%",md:"95%"}} maxW={{base:"80%",md:"95%"}} onClick={()=>{}}>
             <Video  > 
                 <source id="data"  src={intro} type="video/webm"/>
             </Video>
