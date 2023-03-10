@@ -20,19 +20,11 @@ const userSchema = new mongoose.Schema({
         memberType:{
             type:String,
             default:"user"
-        },
-        phone:{
-            type:String,
-            requred:true
         }
 })
 
-userSchema.pre('save',async function(next){
-    if(this.isModified('password')){
-        this.password=await bcrypt.hash(this.password,12)
-    }
-    next()
-})
+
+
 const UserModel=mongoose.model("user",userSchema)
 
 module.exports=UserModel
