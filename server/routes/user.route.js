@@ -1,5 +1,5 @@
 const express=require("express");
-const Usermodel =require("../model/UserModel")
+const UserModel =require("../model/UserModel")
 const bcrypt=require("bcryptjs")
 const userRoute=express.Router()  
 const jwt=require("jsonwebtoken")
@@ -11,7 +11,7 @@ userRoute.post("/login",async(req,res)=>{
   const {email,password}=req.body;
   if(email&&password){
         try{
-            const userData=await Usermodel.findOne({email});
+            const userData=await UserModel.findOne({email});
             if(userData?.name.length>0){
                 //user password
                 //hashed password
@@ -49,7 +49,7 @@ userRoute.post("/signup",async(req,res)=>{
     if(name&&email&&password){
         try{   
             const hashed_password=await bcrypt.hash(password,12)
-            const newUser=await Usermodel({...req.body,password:hashed_password})
+            const newUser=await UserModel({...req.body,password:hashed_password})
 
             await newUser.save();
 
