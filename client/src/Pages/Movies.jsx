@@ -44,9 +44,12 @@ import { Info } from "../Component/Info";
           borderBottom={"10px"}
           borderBottomColor="red"
           minW="100%"
+         
+          maxW={{base:"80%",md:"100%"}}
           height={"640px"}
           bgImage={status?"":front.poster}
-          bgSize="cover"
+          bgSize={{base:"cover",md:"cover"}}
+          bgPosition={{base:"right",md:"left"}}
         >
           <HeaderDashboard />
           
@@ -66,13 +69,13 @@ import { Info } from "../Component/Info";
           >
             <Heading fontSize={"59px"}>{front.title}</Heading>
             <HStack>
-              <Button onClick={()=>{setstatus(true)}} minW="180px" bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
+              <Button onClick={()=>{setstatus(true)}}minW={{base:"120px",md:"180px"}}  bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
                 Play
               </Button>
               <Button
                 bgColor="rgb(96,94,90)"
                 color="white"
-                minW="180px"
+                minW={{base:"120px",md:"180px"}} 
                
               >
                 <Info data={front}/>
@@ -91,9 +94,10 @@ import { Info } from "../Component/Info";
             Top Rated on Netflix
           </Heading>
           <SimpleGrid
-            templateColumns={"400px 400px 400px"}
-            gap="20px"
-            justifyContent={"center"}
+              columns={{base:1,md:3}}
+              gap="20px"
+              justifyContent={"center"}
+              justifyItems={"center"}
           >
             {
               state?.movie?.map((e,i)=>{
@@ -111,9 +115,11 @@ import { Info } from "../Component/Info";
             Trending Now
           </Heading>
           <SimpleGrid
-            templateColumns={"400px 400px 400px"}
-            gap="20px"
-            justifyContent={"center"}
+         columns={{base:1,md:3}}
+         gap="20px"
+         justifyContent={"center"}
+         justifyItems={"center"}
+            
           >
                    {
               state?.movie?.map((e,i)=>{
@@ -131,9 +137,10 @@ import { Info } from "../Component/Info";
             Netflix Originals
           </Heading>
           <SimpleGrid
-            templateColumns={"400px 400px 400px"}
-            gap="20px"
-            justifyContent={"center"}
+         columns={{base:1,md:3}}
+         gap="20px"
+         justifyContent={"center"}
+         justifyItems={"center"}
           >
              {
               state?.movie?.map((e,i)=>{

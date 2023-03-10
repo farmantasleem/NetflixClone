@@ -47,9 +47,12 @@ import { ListCard } from "../Component/ListCard";
           borderBottom={"10px"}
           borderBottomColor="red"
           minW="100%"
+        
+          maxW={{base:"80%",md:"100%"}}
           height={"640px"}
-          bgImage={status?"":front?.poster||""}
-          bgSize="cover"
+          bgImage={status?"":front.poster}
+          bgSize={{base:"cover",md:"cover"}}
+          bgPosition={{base:"right",md:"left"}}
         >
           <HeaderDashboard />
           <Center minH="100%" hidden={!state?.mylist?.length<1}>
@@ -74,13 +77,13 @@ import { ListCard } from "../Component/ListCard";
           >
             <Heading fontSize={"59px"}>{front?.title}</Heading>
             <HStack>
-              <Button onClick={()=>{setstatus(true)}} minW="180px" bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
+              <Button onClick={()=>{setstatus(true)}} minW={{base:"120px",md:"180px"}}  bgColor="red" color="white" leftIcon={<AiFillPlayCircle />}>
                 Play
               </Button>
               <Button
                 bgColor="rgb(96,94,90)"
                 color="white"
-                minW="180px"
+                minW={{base:"120px",md:"180px"}} 
                
               >
                 <Info data={front}/>
@@ -99,9 +102,10 @@ import { ListCard } from "../Component/ListCard";
            My List
           </Heading>
           <SimpleGrid
-            templateColumns={"400px 400px 400px"}
-            gap="20px"
-            justifyContent={"center"}
+       columns={{base:1,md:3}}
+       gap="20px"
+       justifyContent={"center"}
+       justifyItems={"center"}
           >
             {
               state?.mylist?.map((e,i)=>{
