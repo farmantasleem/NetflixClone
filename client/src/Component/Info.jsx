@@ -56,10 +56,10 @@ export const Info = ({ data}) => {
               <Heading fontSize={{base:"19px",md:"unset"}}>{data?.title}</Heading>
               <Text fontSize={{base:"14px",md:"17px"}}>   {data?.description || data?.decription}</Text>
             </Stack>
-            <Heading  pt="30px" fontSize={{base:"14px",md:"20px"}}>Info on {data.title}</Heading>
+            <Heading  pt="30px" fontSize={{base:"14px",md:"20px"}}>Info on {data?.title}</Heading>
             <HStack>
                 <Text color="rgb(78,77,79)">Genres : </Text>
-                <Text>{data.genre.join(" | ")}</Text>
+                <Text>{data?.genre?.join(" | ")}</Text>
             </HStack>
             <HStack>
                 <Text color="rgb(78,77,79)">Release Date : </Text>

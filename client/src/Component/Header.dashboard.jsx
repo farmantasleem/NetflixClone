@@ -8,11 +8,11 @@ export const HeaderDashboard=()=>{
         <Stack zIndex={2} p="20px" direction={"row"}  justifyContent="space-between" color="white" minW="100%" >
             <Stack direction={"row"} gap="10px" >
             <Image width="150px" src={logo}/>  
-            <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}> Home</Button>    
+           <NavLink to="/dashboard"> <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}> Home</Button>    </NavLink>
             <NavLink to={"/tvseries"}>    <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>TV Series</Button> </NavLink>   
            <NavLink to="/movies"> <Button bgColor="transparent" _hover={{bgColor:"black",color:"white"}}>Movies</Button>  </NavLink>
             <NavLink to="/new"><Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>New & Popular</Button> </NavLink>
-            <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>My List</Button> 
+         <NavLink to="/mylist">   <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>My List</Button> </NavLink>
                 </Stack>  
               <NavLink to="/">  <BiLogOutCircle color="red" fontSize="33px" cursor="pointer"></BiLogOutCircle>    </NavLink>
            

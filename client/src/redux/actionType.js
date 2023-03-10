@@ -1,2 +1,3 @@
 export const GETDATAREQUEST="GETREQUEST";
 export const GETDATA="GETDATA"
+export const ADDLIST="ADDLIST"
