@@ -1,6 +1,6 @@
 const express=require("express");
 const mongoose=require("mongoose");
-const { Authentication } = require("../middlewares/authentication.js");
+const { Authentication } = require("../middlewares/Authentication.js");
 const MylistModel = require("../model/ListModel");
 const MovieModel = require("../model/MovieModel");
 const movieRoute=express.Router();
