@@ -17,6 +17,7 @@ import {
   import ReactVideoPlayer from "../Component/ReactVideoPlayer";
   import { useSelector } from "react-redux";
 import { Info } from "../Component/Info";
+import { ListCard } from "../Component/ListCard";
   
   export const Mylist = () => {
     const[status,setstatus]=useState(false)
@@ -31,7 +32,7 @@ import { Info } from "../Component/Info";
       if(state.mylist.length>0){
         setfront(state.mylist[0])
       }
-    },[])
+    },[state])
     return (
       <Container minW="100%" minH="880px" p="0px" bgColor="rgb(20,20,20)">
         <Container
@@ -105,7 +106,7 @@ import { Info } from "../Component/Info";
             {
               state?.mylist?.map((e,i)=>{
               
-                  return <MovieCard data={e} updateFront={setfront}  setstatus={setstatus}/>
+                  return <ListCard data={e} updateFront={setfront}  setstatus={setstatus}/>
           
               
               })
