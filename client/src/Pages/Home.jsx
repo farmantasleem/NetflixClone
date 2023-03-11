@@ -23,7 +23,7 @@ import promotion3 from "../assests/promotion3.jpg";
 import promotion4 from "../assests/promotion4.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/actions";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 export const Home = () => {
   const dispatch=useDispatch();
   const navigate=useNavigate()
@@ -69,7 +69,7 @@ export const Home = () => {
                 pr="10px"
                 height={"50px"}
               />
-              <Button
+            <NavLink to="/user">  <Button
                 bgColor="rgb(244,6,18)"
                 height="50px"
                 _hover={{}}
@@ -78,7 +78,7 @@ export const Home = () => {
                 pr="50px"
               >
                 Get Started
-              </Button>
+              </Button></NavLink>
             </Stack>
           </Stack>
         </Center>
@@ -154,7 +154,7 @@ export const Home = () => {
 
      <Container pb="40px" gap="20px" spacing="10px" color="rgb(255,255,255)" minW="65%" bgColor="rgb(0,0,0)">
       <Stack direction="column" gap="10px">
-      <Heading fontSize="66px" pb="40px">
+      <Heading fontSize="55px" pb="40px">
         Frequently Asked Questions
 
         </Heading>
