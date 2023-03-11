@@ -47,7 +47,7 @@ movieRoute.post("/addlist/:id",Authentication,async(req,res)=>{
 movieRoute.get("/list",Authentication,async(req,res)=>{
     const userId=req.body.userid;
     try{
-        const allList=await MylistModel.find({user:userId});
+        const allList=await MylistModel.find({user:userId}).populate("movie");
         res.status(200).send({data:allList})
 
     }catch(err){
