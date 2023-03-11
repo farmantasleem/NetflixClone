@@ -4,7 +4,10 @@ import logo from "../assests/logo.png"
 import {BiLogOutCircle} from "react-icons/bi"
 import { NavLink } from "react-router-dom";
 import NavbarMobile from "./NavbarMobile";
+import { useDispatch } from "react-redux";
+import { LOGOUTUSER } from "../redux/actionType";
 export const HeaderDashboard=()=>{
+    const dispatch=useDispatch()
     return (
      
             <Stack maxW={"100%"} overflow="hidden" zIndex={2} p="20px" direction={"row"}  justifyContent="space-between" color="white" minW="100%" >
@@ -18,9 +21,9 @@ export const HeaderDashboard=()=>{
             <NavLink to={"/tvseries"}  >    <Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>TV Series</Button> </NavLink>   
            <NavLink to="/movies"  > <Button bgColor="transparent" _hover={{bgColor:"black",color:"white"}}>Movies</Button>  </NavLink>
             <NavLink to="/new" ><Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>New & Popular</Button> </NavLink>
-         <NavLink to="/mylist"  >   <Button hidden={{base:true,md:false}} bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>My List</Button> </NavLink>
+         <NavLink to="/mylist"  >   <Button  bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>My List</Button> </NavLink>
                 </Stack>  
-             <Stack display={{base:"none",md:"flex"}} > <NavLink    to="/" >  <BiLogOutCircle  color="red" fontSize="33px" cursor="pointer"></BiLogOutCircle>    </NavLink></Stack>
+             <Stack display={{base:"none",md:"flex"}} > <NavLink    to="/" >  <BiLogOutCircle  onClick={()=>{dispatch({type:LOGOUTUSER})}} color="red" fontSize="33px" cursor="pointer"></BiLogOutCircle>    </NavLink></Stack>
            
         </Stack>
         

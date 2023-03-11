@@ -14,11 +14,13 @@ import { MovieCard } from "../Component/MovieCard";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import ReactVideoPlayer from "../Component/ReactVideoPlayer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Info } from "../Component/Info";
+import { getData } from "../redux/actions";
 
 export const Dashboard = () => {
   const[status,setstatus]=useState(false)
+  const dispatch=useDispatch()
   const state=useSelector((state)=>state.state);
   const[front,setfront]=useState({
     title:"Lucifer",
@@ -28,6 +30,7 @@ export const Dashboard = () => {
   })
   useEffect(()=>{
     console.log(state)
+    dispatch(getData())
   })
   return (
     <Container minW="100%" maxW="100%" overflow={"hidden"} minH="880px" p="0px" bgColor="rgb(20,20,20)">

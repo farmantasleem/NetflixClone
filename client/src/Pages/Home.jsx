@@ -21,13 +21,20 @@ import promotion1 from "../assests/promotion1.jpg";
 import promotion2 from "../assests/promotion2.jpg";
 import promotion3 from "../assests/promotion3.jpg";
 import promotion4 from "../assests/promotion4.jpg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 export const Home = () => {
   const dispatch=useDispatch();
+  const navigate=useNavigate()
+  const auth=useSelector((state)=>state.state.auth);
   useEffect(()=>{
     dispatch(getData())
-  },[])
+    if(auth){
+      navigate("/dashboard")
+      }
+  },[auth])
+
   return (
     <Container minW="100%" p="0%">
       <Container

@@ -3,12 +3,14 @@ import {HStack ,Drawer,Heading, DrawerBody,Button, DrawerFooter,DrawerHeader,Dra
 import {BsFillCartFill} from "react-icons/bs"
 import {RiMenu3Line} from "react-icons/ri"
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BiLogOutCircle } from "react-icons/bi";
+import { LOGOUTUSER } from "../redux/actionType";
 function NavbarMobile() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     const state=useSelector((state)=>state.state)
+    const dispatch=useDispatch()
  
     return (
       <>
@@ -33,7 +35,7 @@ function NavbarMobile() {
            <NavLink to="/movies"  > <Button bgColor="transparent" _hover={{bgColor:"black",color:"white"}}>Movies</Button>  </NavLink>
             <NavLink to="/new" ><Button bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>New & Popular</Button> </NavLink>
          <NavLink to="/mylist"  >   <Button  bgColor="transparent"  _hover={{bgColor:"black",color:"white"}}>My List</Button> </NavLink>
-         <NavLink    to="/" >  <BiLogOutCircle  color="red" fontSize="33px" cursor="pointer"></BiLogOutCircle>    </NavLink>
+         <NavLink    to="/" >  <BiLogOutCircle onClick={()=>{dispatch({type:LOGOUTUSER})}} color="red" fontSize="33px" cursor="pointer"></BiLogOutCircle>    </NavLink>
           
           
               </VStack>

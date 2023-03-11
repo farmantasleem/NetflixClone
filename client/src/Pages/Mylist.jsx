@@ -15,9 +15,10 @@ import {
   import { AiFillPlayCircle } from "react-icons/ai";
   import { BsFillInfoCircleFill } from "react-icons/bs";
   import ReactVideoPlayer from "../Component/ReactVideoPlayer";
-  import { useSelector } from "react-redux";
+  import { useDispatch, useSelector } from "react-redux";
 import { Info } from "../Component/Info";
 import { ListCard } from "../Component/ListCard";
+import { getMyList } from "../redux/actions";
   
   export const Mylist = () => {
     const[status,setstatus]=useState(false)
@@ -28,10 +29,12 @@ import { ListCard } from "../Component/ListCard";
         decription:"",
         genres:["",""]
     })
+    const dispatch=useDispatch()
     useEffect(()=>{
       if(state.mylist.length>0){
         setfront(state.mylist[0]||{})
       }
+      // dispatch(getMyList())
     },[state])
     return (
       <Container minW="100%" minH="880px" p="0px" bgColor="rgb(20,20,20)">

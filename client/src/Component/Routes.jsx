@@ -7,6 +7,7 @@ import { Movies } from "../Pages/Movies";
 import { Mylist } from "../Pages/Mylist";
 import { Popular } from "../Pages/Popular";
 import { Tvseries } from "../Pages/Tvseries";
+import User from "../Pages/User";
 export const AllRoutes=()=>{
     return(
         <Routes>
@@ -16,6 +17,7 @@ export const AllRoutes=()=>{
             <Route path="/new" element={<Popular/>} />
             <Route path="/tvseries" element={<Tvseries/>} />
             <Route path="/mylist" element={<Mylist/>}/>
+            <Route path="/user" element={<User/>}/>
             
         </Routes>
     )
