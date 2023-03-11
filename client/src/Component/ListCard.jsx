@@ -9,12 +9,12 @@ import { Info } from "./Info";
 import { useDispatch } from "react-redux";
 import { addtolist, removeList } from "../redux/actions";
 import {CiBookmarkRemove} from "react-icons/ci"
-export const ListCard=({data,updateFront,setstatus})=>{
+export const ListCard=({data,updateFront,setstatus,listid})=>{
     const dispatch=useDispatch()
     const toast=useToast()
     const[hide,setside]=useState(true)
     const handleClick=()=>{
-       dispatch(removeList(data._id,toast))
+       dispatch(removeList(listid,toast))
        console.log(data)
     }
     return(

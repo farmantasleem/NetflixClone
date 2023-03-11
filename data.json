@@ -1,0 +1,32 @@
+[
+    {
+        "title":"Money Heist",
+        "decription":"Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.",
+        "poster":"https://images.wallpapersden.com/image/wxl-money-heist_66878.jpg",
+        "genre":["Crime"],
+        "releasedate":"2017",
+        "category":"tvseries",
+        "lang":"English"
+    },
+    {
+        "title":"Stranger Things",
+        "decription":"When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+        "poster":"https://occ-0-3350-3647.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABer7SeWc6FvkBqWtk61GwL7rshAEVCOARQZVTEJGnLXykYBlO4nbbr6gs7M650BjULuaN6hucXKr5xY2iqPAajrxXd70HawdJeuD.jpg?r=608",
+        "genre":["Drama","Fantasy","Horror"],
+        "releasedate":"2016",
+        "category":"tvseries",
+        "lang":"English"
+    },
+    {
+        "title":"RRR (Hindi)",
+        "decription":"A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in this epic saga set in pre-independent India.",
+        "poster":"https://blogger.googleusercontent.com/img/a/AVvXsEgNNOEunxaEpU6UvojhPLxYStxzDD48CvdQAvFD4qhnUUCTxuYgT-KFgHdGjMqlrjWCMQK2eFKPIDRt9zROOlIDdAZEE21DgkHyh2GhNmZV3SC3vK4T5JmYUiOVZJrrxs92G8vBpbPgZ3n_DqLTtGm1304k00NzlB4aS5oltmQBbYPjn2rRfYtkA4DBxg",
+        "genre":["Drama"],
+        "releasedate":"2022",
+        "category":"movie",
+        "lang":"Hindi"
+    }
+
+
+
+]

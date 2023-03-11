@@ -32,9 +32,10 @@ import { getMyList } from "../redux/actions";
     const dispatch=useDispatch()
     useEffect(()=>{
       if(state.mylist.length>0){
-        setfront(state.mylist[0]||{})
+        setfront(state.mylist[0].movie||{})
       }
-      // dispatch(getMyList())
+      dispatch(getMyList())
+      console.log(state)
     },[state])
     return (
       <Container minW="100%" minH="880px" p="0px" bgColor="rgb(20,20,20)">
@@ -113,7 +114,7 @@ import { getMyList } from "../redux/actions";
             {
               state?.mylist?.map((e,i)=>{
               
-                  return <ListCard data={e} updateFront={setfront}  setstatus={setstatus}/>
+                  return <ListCard data={e.movie} listid={e._id} updateFront={setfront}  setstatus={setstatus}/>
           
               
               })

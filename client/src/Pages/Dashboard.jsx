@@ -31,7 +31,7 @@ export const Dashboard = () => {
   useEffect(()=>{
     console.log(state)
     dispatch(getData())
-  })
+  },[])
   return (
     <Container minW="100%" maxW="100%" overflow={"hidden"} minH="880px" p="0px" bgColor="rgb(20,20,20)">
       <Container

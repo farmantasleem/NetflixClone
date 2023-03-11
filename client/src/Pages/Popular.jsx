@@ -28,7 +28,7 @@ import { Info } from "../Component/Info";
     })
     useEffect(()=>{
       console.log(state)
-    })
+    },[])
     return (
       <Container minW="100%" minH="880px" p="0px" bgColor="rgb(20,20,20)">
         <Container

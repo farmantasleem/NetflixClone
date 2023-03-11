@@ -10,7 +10,7 @@ export const getData=()=>{
 
 export const addtolist=(data,toast)=>{
     return async(disptach)=>{
-        const data2=await fetch(`https://netflix-h7qa.onrender.com/movie/addlist/${data}`,{
+        const data2=await fetch(`https://netflix-h7qa.onrender.com/movie/addlist/${data._id}`,{
             method:"POST",
             headers:{
                 "content-type":"application/json",
@@ -114,7 +114,7 @@ export function signupUser(data,toast){
 
 export const removeFromList=(id)=>{
     return  async()=>{
-        const deleteList=await fetch(`https://netflix-h7qa.onrender.com/list/${id}`,{
+        const deleteList=await fetch(`https://netflix-h7qa.onrender.com/movie/list/${id}`,{
             method:"DELETE",
             headers:{"content-type":"application/json","authentication":`bearer ${localStorage.getItem("TOKEN")}`},
         
@@ -124,10 +124,12 @@ export const removeFromList=(id)=>{
 
 export const getMyList=()=>{
     return async(dispatch)=>{
-        const data=await fetch("https://netflix-h7qa.onrender.com/movie/list",{
+        const data=await fetch("https://netflix-h7qa.onrender.com/movie/list/all",{
+            method:"GET",
             headers:{"authorization":`bearer ${localStorage.getItem("TOKEN")}`}
         });
         const resp=await data.json();
+        console.log(resp)
         dispatch({type:ALLLIST,payload:resp.data||[]})
     }
 }
