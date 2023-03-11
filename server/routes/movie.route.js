@@ -1,6 +1,7 @@
 const express=require("express");
 const mongoose=require("mongoose");
-const { Authentication } = require("../middlewares/Authentication.js");
+const { Authentication } = require("../middlewares/Authentication");
+
 const MylistModel = require("../model/ListModel");
 const MovieModel = require("../model/MovieModel");
 const movieRoute=express.Router();
@@ -44,8 +45,9 @@ movieRoute.post("/addlist/:id",Authentication,async(req,res)=>{
     }
 })
 
-movieRoute.get("/list",Authentication,async(req,res)=>{
+movieRoute.get("/list/all",Authentication,async(req,res)=>{
     const userId=req.body.userid;
+    console.log(userId)
     try{
         const allList=await MylistModel.find({user:userId}).populate("movie");
         res.status(200).send({data:allList})
@@ -58,6 +60,7 @@ movieRoute.get("/list",Authentication,async(req,res)=>{
 movieRoute.delete("/list/:id",Authentication,async(req,res)=>{
     const listId=req.params.id;
     const userId=req.body.userid
+
     try{
         const movieTobeDeleted=await MylistModel.findOneAndDelete({user:userId,_id:listId})
         res.status(200).send({msg:"Removed from successfully"})
