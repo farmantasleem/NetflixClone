@@ -102,7 +102,7 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 
 ## Login & SignUp
 
-<img src="client/src/assets/loginpage.png">
+<img src="client/src/assets/userpage.png">
 <br />
 
 ## Shop Page
