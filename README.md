@@ -59,7 +59,7 @@
   <a href="#Contact">Author</a> &#10023;
 </p>
 
-It’s Solo Project where I've used MERN stack to Built the Clone of  Netflix along with frontend and backend integration
+It’s Solo Project where I've used MERN stack to Build the Clone of  Netflix along with frontend and backend integration
 its Fully Responsive web application that allows you to Watch your favourite award-winning TV shows, movies, anime, documentaries, . It has a variety of categories, . This project is just for educational purpose.
 
 
