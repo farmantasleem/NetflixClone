@@ -13,7 +13,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
-  <img src="https://img.shields.io/badge/Redux_Toolkit-593D88?style=for-the-badge&logo=reduxtoolkit&logoColor=white" alt="redux" />
+  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
   <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
@@ -44,9 +44,9 @@
 
 
 
-<h3 align="center"><a href="https://finestshave.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://netflixclonebyfarman.vercel.app"><strong>Want to see live preview »</strong></a></h3>
 
-<h3 align="center"><a href="https://www.linkedin.com/posts/farmanarsh_heres-the-presentation-of-my-recently-built-activity-7028661147696324609-8DE9?utm_source=share&utm_medium=member_desktop"><strong>Demo Video »</strong></a></h3>
+<h3 align="center"><a href="linkedinvideo"><strong>Demo Video »</strong></a></h3>
 
 
 <br />
@@ -181,7 +181,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Tools used on this project
 
 - Visual Studio Code
-- Vite-JS template
 
 <br />
 
