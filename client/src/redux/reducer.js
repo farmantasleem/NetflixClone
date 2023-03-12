@@ -10,7 +10,7 @@ const reducer=(oldState=initialState,action)=>{
             return {...oldState,movie:payload}
             break;
         case ADDLIST:
-            return { ...oldState,mylist:[payload,...oldState.mylist]}
+            return { ...oldState,mylist:[...oldState.mylist]}
         case REMOVELIST:
             let newArray=oldState.mylist.filter((e,i)=>{return e._id!==payload})    
             return {...oldState,mylist:[...newArray]}

@@ -9,7 +9,7 @@ export const getData=()=>{
 }
 
 export const addtolist=(data,toast)=>{
-    return async(disptach)=>{
+    return async(dispatch)=>{
         const data2=await fetch(`https://netflix-h7qa.onrender.com/movie/addlist/${data._id}`,{
             method:"POST",
             headers:{
@@ -20,7 +20,8 @@ export const addtolist=(data,toast)=>{
         toast({
             description: "Added to List",
         })
-       disptach({type:ADDLIST,payload:data})
+        dispatch(getMyList())
+     
     }
 }
 
