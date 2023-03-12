@@ -130,6 +130,11 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 <img src="./client/src/assests/mylistpage.png">
 <br />
 
+## Video Player
+
+<img src="./client/src/assests/videoplayer.png">
+<br />
+
 
 
 
