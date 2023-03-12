@@ -13,7 +13,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
-  <img src="https://img.shields.io/badge/Redux_Toolkit-593D88?style=for-the-badge&logo=reduxtoolkit&logoColor=white" alt="redux" />
+  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
   <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
@@ -44,9 +44,9 @@
 
 
 
-<h3 align="center"><a href="https://finestshave.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://netflixclonebyfarman.vercel.app"><strong>Want to see live preview »</strong></a></h3>
 
-<h3 align="center"><a href="https://www.linkedin.com/posts/farmanarsh_heres-the-presentation-of-my-recently-built-activity-7028661147696324609-8DE9?utm_source=share&utm_medium=member_desktop"><strong>Demo Video »</strong></a></h3>
+<h3 align="center"><a href="linkedinvideo"><strong>Demo Video »</strong></a></h3>
 
 
 <br />
@@ -59,23 +59,23 @@
   <a href="#Contact">Author</a> &#10023;
 </p>
 
-It’s Solo project where I've used MERN stack to make the FinestShave with  creativity along with frontend and backend integration
-its Fully Responsive e-commerce web application that allows you to buy Products. It has a variety of categories, just visit the product listing page and you will see all the products, apply filters as per your need and in just a few clicks you can buy any products from the website. This project is just for educational purpose.
+It’s Solo Project where I've used MERN stack to Build the Clone of  Netflix along with frontend and backend integration
+its Fully Responsive web application that allows you to Watch your favourite award-winning TV shows, movies, anime, documentaries, . It has a variety of categories, . This project is just for educational purpose.
 
-<img src="https://i.ibb.co/VwbmL6p/Studio-Project.gif" width="800px" />
+
 
 
 <br />
 
 ## Screens 
 - Homepage / Landing Page
-- Product Listing Page with all categories
-- Product Description Page
-- Cart Management Page
-- Checkout with Address Management Page
-- Login / Logout Page
-- User Dashboard Page
-- Admin Dashboard Page
+- Login/Register Page
+- User Dashboard Page (accessible only after login)
+- Movie Page
+- Tv Series Page
+- New & Popular Page
+- MyList Page
+
 
 
 
@@ -90,6 +90,8 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 - Add item to list & Remove From List
 - Movies/Series Data
 - Watch any movie/series
+- State Management Using Redux
+- Condtional Rendering
 - Responsive
 
 
@@ -132,7 +134,7 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 
 ## Video Player
 
-<img src="./client/src/assests/videoplayer.png">
+<img src="./client/src/assests/videoplayer1.png">
 <br />
 
 
@@ -179,7 +181,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Tools used on this project
 
 - Visual Studio Code
-- Vite-JS template
 
 <br />
 
