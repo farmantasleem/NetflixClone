@@ -102,22 +102,22 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 
 ## Login & SignUp
 
-<img src="client/src/assests/userpage.png">
+<img src="./client/src/assests/userpage.png">
 <br />
 
 ## Dashboard
 
-<img src="client/src/assests/dashboardpage.png">
+<img src="./client/src/assests/dashboardpage.png">
 <br />
 
 ## Tv Series
 
-<img src="client/src/assests/tvseriespage.png">
+<img src="./client/src/assests/tvseriespage.png">
 <br />
 
 ## User Dashboard Page
 
-<img src="client/src/assets/userdashboard.png">
+<img src="./client/src/assets/userdashboard.png">
 <br />
 
 ## Admin Dashboard Page
