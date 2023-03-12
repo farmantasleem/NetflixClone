@@ -132,7 +132,7 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 
 ## Video Player
 
-<img src="./client/src/assests/videoplayer.png">
+<img src="./client/src/assests/videoplayer1.png">
 <br />
 
 
