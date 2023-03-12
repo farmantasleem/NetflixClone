@@ -69,13 +69,13 @@ its Fully Responsive web application that allows you to Watch your favourite awa
 
 ## Screens 
 - Homepage / Landing Page
-- Product Listing Page with all categories
-- Product Description Page
-- Cart Management Page
-- Checkout with Address Management Page
-- Login / Logout Page
-- User Dashboard Page
-- Admin Dashboard Page
+- Login/Register Page
+- User Dashboard Page (accessible only after login)
+- Movie Page
+- Tv Series Page
+- New & Popular Page
+- MyList Page
+
 
 
 
