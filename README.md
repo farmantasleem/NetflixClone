@@ -97,7 +97,7 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 
 ## Home Page
 
-<img src="client/src/assests/homepage.png">
+<img src="/client/src/assests/homepage.png">
 <br />
 
 ## Login & SignUp
