@@ -115,14 +115,19 @@ its Fully Responsive e-commerce web application that allows you to buy Products.
 <img src="./client/src/assests/tvseriespage.png">
 <br />
 
-## User Dashboard Page
+## Movie Page
 
 <img src="./client/src/assets/userdashboard.png">
 <br />
 
-## Admin Dashboard Page
+## New & Popluar Shows/movies Page
 
-<img src="client/src/assets/adminpage.png">
+<img src="./client/src/assests/popularpage.png">
+<br />
+
+## My List Page
+
+<img src="./client/src/assests/mylistpage.png">
 <br />
 
 
